@@ -1,0 +1,104 @@
+---
+const devices = [
+  { icon: "📺", name: "Smart TV Android", brands: ["Sony", "TCL", "Hisense"], color: "from-purple-500 to-pink-500" },
+  { icon: "📱", name: "Móviles & Tablets", brands: ["Android"], color: "from-blue-500 to-cyan-500" },
+  { icon: "💻", name: "Laptops", brands: ["Windows"], color: "from-green-500 to-emerald-500" },
+  { icon: "🎯", name: "Google TV", brands: ["Chromecast"], color: "from-red-500 to-orange-500" },
+  { icon: "🔥", name: "Fire TV", brands: ["Amazon"], color: "from-orange-500 to-yellow-500" },
+  { icon: "📡", name: "Xiaomi TV", brands: ["Mi TV"], color: "from-indigo-500 to-purple-500" }
+];
+---
+
+<section id="dispositivos" class="relative py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header con ilustración -->}
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center gap-4 mb-8">
+        <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full"></div>
+        <span class="text-5xl">🎮</span>
+        <div class="w-16 h-1 bg-gradient-to-r from-yellow-500 to-green-500 rounded-full"></div>
+      </div>
+      
+      <h2 class="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
+        Mira en cualquier
+        <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600">
+          dispositivo
+        </span>
+      </h2>
+      
+      <p class="text-2xl text-gray-600 max-w-2xl mx-auto">
+        Tu contenido favorito te sigue a donde vayas
+      </p>
+    </div>
+
+    <!-- Cards circulares ilustradas -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
+      {devices.map((device, index) => (
+        <div 
+          class="group text-center"
+          style={`animation-delay: ${index * 0.15}s;`}
+        >
+          {/* Circle container */}
+          <div class="relative inline-block mb-6">
+            {/* Main circle */}
+            <div class={`w-48 h-48 rounded-full bg-gradient-to-br ${device.color} flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10`}>
+              <span class="text-7xl">{device.icon}</span>
+            </div>
+            
+            {/* Outer ring */}
+            <div class={`absolute inset-0 rounded-full bg-gradient-to-br ${device.color} opacity-30 blur-xl group-hover:opacity-50 transition-opacity duration-500`}></div>
+            
+            {/* Pulse effect */}
+            <div class={`absolute inset-0 rounded-full bg-gradient-to-br ${device.color} opacity-0 group-hover:opacity-20 animate-ping`}></div>
+          </div>
+
+          {/* Content */}
+          <h3 class="text-2xl font-black text-gray-900 mb-2">
+            {device.name}
+          </h3>
+          <p class="text-gray-600">
+            {device.brands.join(" • ")}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Features con iconos */}
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-8 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl">
+        <div class="text-6xl mb-4">⚡</div>
+        <h3 class="text-xl font-black text-gray-900 mb-2">Instalación Fácil</h3>
+        <p class="text-gray-600">Solo abre el link y listo</p>
+      </div>
+
+      <div class="text-center p-8 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl">
+        <div class="text-6xl mb-4">🔄</div>
+        <h3 class="text-xl font-black text-gray-900 mb-2">Sincronización</h3>
+        <p class="text-gray-600">Continúa viendo en cualquier pantalla</p>
+      </div>
+
+      <div class="text-center p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl">
+        <div class="text-6xl mb-4">📊</div>
+        <h3 class="text-xl font-black text-gray-900 mb-2">Calidad Adaptativa</h3>
+        <p class="text-gray-600">Ajuste automático según tu internet</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  [style*="animation-delay"] {
+    animation: bounceIn 0.8s ease-out backwards;
+  }
+
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+  }
+</style>

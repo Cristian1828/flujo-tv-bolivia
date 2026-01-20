@@ -1,0 +1,117 @@
+---
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b-2 border-orange-200 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <nav class="flex items-center justify-between py-4">
+      {/* Logo */}
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <img 
+          src="https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/logo_flujo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di9sb2dvX2ZsdWpvLnBuZyIsImlhdCI6MTc2ODg0NjEyMywiZXhwIjo0OTIyNDQ2MTIzfQ.XmyVv221qvP0y0p3wj6SY8L-QHdFlRRXeS8K4G3BCXs"
+          alt="Flujo TV"
+          class="h-12 md:h-14 w-auto group-hover:scale-110 transition-transform duration-300"
+        />
+        <div class="flex flex-col">
+          <span class="text-lg md:text-xl font-black text-[#FF6B00] leading-none">FLUJO TV</span>
+          <span class="text-xs text-gray-500 font-medium">premium</span>
+        </div>
+      </a>
+
+      {/* Desktop Navigation */}
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a href="#inicio" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Inicio
+        </a>
+        <a href="#beneficios" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Beneficios
+        </a>
+        <a href="#instalacion" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Instalación
+        </a>
+        <a href="#planes" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Planes
+        </a>
+        <a href="#preguntas" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          FAQ
+        </a>
+        <a href="#descarga" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Descarga
+        </a>
+        
+        {/* Comprar Button */}
+        <a 
+          href="#planes"
+          class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          <span>COMPRAR</span>
+        </a>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button 
+        id="mobile-menu-btn"
+        class="md:hidden p-2 bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-xl"
+        aria-label="Menú"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    {/* Mobile Menu */}
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-4">
+        <a href="#inicio" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Inicio
+        </a>
+        <a href="#beneficios" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Beneficios
+        </a>
+        <a href="#instalacion" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Instalación
+        </a>
+        <a href="#planes" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Planes
+        </a>
+        <a href="#preguntas" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          FAQ
+        </a>
+        <a href="#descarga" class="text-gray-700 hover:text-orange-600 font-semibold transition-colors duration-300">
+          Descarga
+        </a>
+        <a 
+          href="#planes"
+          class="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-xl"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          <span>COMPRAR</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href') as string);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('mobile-menu')?.classList.add('hidden');
+      }
+    });
+  });
+</script>

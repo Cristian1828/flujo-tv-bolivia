@@ -1,0 +1,128 @@
+---
+// Bolivia - SIN Yape ni Plin, CON Binance y Lemon
+const paymentMethods = [
+  {
+    name: "PayPal",
+    img: "https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/Paypal%20icon.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di9QYXlwYWwgaWNvbi5wbmciLCJpYXQiOjE3Njg4NDYxNTIsImV4cCI6MTc3NzQ4NjE1Mn0.PGfhgAqSZZtxDlpyx_Ynp-3V2N-GoejiBIOZjQMMh7k",
+    color: "from-blue-400 to-blue-600"
+  },
+  {
+    name: "Visa",
+    img: "https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/visa%20icon.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di92aXNhIGljb24ucG5nIiwiaWF0IjoxNzY4ODQ2MjI1LCJleHAiOjE3Nzc0ODYyMjV9.fMUMifjjVvZdl_EKCrEVY4ljmaddn2EK3cFbWu-tZro",
+    color: "from-blue-600 to-blue-800"
+  },
+  {
+    name: "Mercado Pago",
+    img: "https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/mp%20icon.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di9tcCBpY29uLnBuZyIsImlhdCI6MTc2ODg0NjIzOSwiZXhwIjoxNzc3NDg2MjM5fQ.Z69RNJIjZ0B1El0f9qZHRUeI8_JPLCBaEJSdiwIpTGs",
+    color: "from-cyan-400 to-blue-500"
+  },
+  {
+    name: "Binance",
+    img: "https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/bicance%20icon.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di9iaWNhbmNlIGljb24ucG5nIiwiaWF0IjoxNzY4ODQ2NDUzLCJleHAiOjE3Nzc0ODY0NTN9.PkhxZX0XO9MvFNiYB5sctkWHK6PserPb7dRWYiqbKFE",
+    color: "from-yellow-400 to-yellow-600"
+  },
+  {
+    name: "Lemon Cash",
+    img: "https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/lemon%20icon.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di9sZW1vbiBpY29uLnBuZyIsImlhdCI6MTc2ODg0OTg0MywiZXhwIjoxNzc3NDg5ODQzfQ.uRJjEheHvM0wzK1NqmDndi2xOvHdVGk7T_G7qgc9BVs",
+    color: "from-green-400 to-green-600"
+  }
+];
+---
+
+<section id="payment" class="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-[#0A0A0A] to-[#111111] relative border-t border-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 md:px-6">
+    <div class="text-center mb-8 md:mb-12 animate-fade-in-up">
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-black mb-4 text-white">
+        Paga como <span class="gradient-text">Prefieras</span>
+      </h3>
+      <p class="text-base md:text-lg text-gray-400">
+        Métodos de pago seguros y confiables
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
+      {paymentMethods.map((method, index) => (
+        <div 
+          class="group relative animate-fade-in-up"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          <div class={`absolute -inset-0.5 bg-gradient-to-br ${method.color} rounded-2xl blur opacity-0 group-hover:opacity-60 transition duration-500`}></div>
+          
+          <div class="relative bg-gradient-to-br from-[#1a1a1a] to-[#111111] rounded-2xl p-6 md:p-8 border border-gray-800 group-hover:border-[#FF6B00] transition-all duration-500 hover:scale-110 flex flex-col items-center justify-center min-h-[120px] md:min-h-[140px]">
+            <img 
+              src={method.img} 
+              alt={method.name}
+              class="w-12 h-12 md:w-16 md:h-16 object-contain mb-2 md:mb-3 group-hover:scale-125 transition-transform duration-500"
+            />
+            <p class="text-white font-bold text-xs md:text-sm text-center">{method.name}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 animate-fade-in-up" style="animation-delay: 0.7s;">
+      <div class="relative group">
+        <div class="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+        <div class="relative bg-[#1a1a1a] rounded-xl p-4 md:p-6 border border-gray-800 flex items-center gap-3 md:gap-4">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          <div>
+            <p class="text-white font-bold text-sm md:text-base">Pago Seguro</p>
+            <p class="text-gray-400 text-xs md:text-sm">Encriptación SSL</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+        <div class="relative bg-[#1a1a1a] rounded-xl p-4 md:p-6 border border-gray-800 flex items-center gap-3 md:gap-4">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          <div>
+            <p class="text-white font-bold text-sm md:text-base">Datos Protegidos</p>
+            <p class="text-gray-400 text-xs md:text-sm">100% Confidencial</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+        <div class="relative bg-[#1a1a1a] rounded-xl p-4 md:p-6 border border-gray-800 flex items-center gap-3 md:gap-4">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <div>
+            <p class="text-white font-bold text-sm md:text-base">Activación Rápida</p>
+            <p class="text-gray-400 text-xs md:text-sm">Menos de 5 min</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gradient-text {
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8C42 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out backwards;
+  }
+</style>

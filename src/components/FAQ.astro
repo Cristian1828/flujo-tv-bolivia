@@ -1,0 +1,170 @@
+---
+// FAQ basado en flujotvecuador.app
+const faqs = [
+  { 
+    q: "¿Qué es Flujo TV?", 
+    a: "Es tu plataforma de entretenimiento completa. Miles de canales en vivo, películas, series y todos los partidos desde cualquier pantalla. La mejor alternativa al cable tradicional, más barata y sin ataduras.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>`
+  },
+  { 
+    q: "¿En cuántas pantallas puedo ver al mismo tiempo?", 
+    a: "En hasta 3 dispositivos simultáneamente. Perfecto para compartir con tu familia - cada uno ve lo que quiere, cuando quiere, sin conflictos.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>`
+  },
+  { 
+    q: "¿Funciona en mi dispositivo?", 
+    a: "Si tiene internet, funciona. Smart TV con Android, celulares, tablets, Fire TV Stick, Chromecast, Google TV, TV Box. Instalas la app y listo.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
+  },
+  { 
+    q: "¿Cómo verifico si mi Smart TV es compatible?", 
+    a: "Fácil: si tu TV tiene Google Play Store, es Android y funciona perfectamente. Marcas como Sony, TCL, Philips, Xiaomi suelen tenerlo. ¿No estás seguro? Escríbenos y te ayudamos a confirmarlo.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`
+  },
+  { 
+    q: "¿Cuándo y cómo recibo mis accesos?", 
+    a: "Apenas confirmes el pago, te llegan tus datos (usuario y clave) por email y WhatsApp. En menos de 5 minutos ya estás viendo. Activación inmediata, sin esperas.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`
+  },
+  { 
+    q: "¿Qué velocidad de internet necesito?", 
+    a: "Con 10 Mbps ves perfecto en HD. Si quieres 4K, recomendamos 25 Mbps o más. La app se adapta sola a tu conexión para que nunca se corte.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`
+  },
+  { 
+    q: "¿Tienen plan gratuito o prueba gratis?", 
+    a: "No manejamos versión gratis. Somos un servicio premium que garantiza calidad, estabilidad y canales reales. Nuestro plan más económico arranca en solo $9.99 al mes.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
+  },
+  { 
+    q: "¿Tengo que descargar algo?", 
+    a: "Sí, instalas nuestra app en tu dispositivo. Toma 5 minutos máximo y es súper simple. Te mandamos las instrucciones paso a paso, y si te trabas, nuestro soporte te guía por WhatsApp.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
+  },
+  { 
+    q: "¿Con qué puedo pagar?", 
+    a: "Aceptamos PayPal, tarjetas Visa/Mastercard, Mercado Pago, Binance y Lemon Cash. Paga con lo que te resulte más cómodo.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>`
+  },
+  { 
+    q: "¿Atienden 24/7?", 
+    a: "Totalmente. Nuestro equipo está en WhatsApp las 24 horas, los 7 días de la semana. Cualquier problema, duda o consulta, te respondemos al toque.", 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
+  }
+];
+---
+
+<section id="preguntas" class="relative py-16 md:py-24 bg-gradient-to-br from-[#0A0A0A] via-[#111111] to-[#0d1b0d] overflow-hidden">
+  <!-- Background effects -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-purple-600 rounded-full blur-[150px] opacity-10"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-pink-600 rounded-full blur-[150px] opacity-10"></div>
+  </div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-4 md:px-6">
+    <!-- Header -->
+    <div class="text-center mb-12 md:mb-16">
+      <div class="inline-block mb-4 px-5 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full">
+        <span class="text-purple-400 font-bold text-sm">❓ AYUDA & FAQ</span>
+      </div>
+      
+      <h2 class="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4">
+        Preguntas <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Frecuentes</span>
+      </h2>
+      
+      <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+        Todas las respuestas que necesitas. <span class="text-purple-400 font-bold">Claras y directas.</span>
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details 
+          class="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur rounded-2xl border border-white/10 hover:border-purple-500/50 overflow-hidden transition-all duration-300"
+          style={`animation-delay: ${index * 50}ms`}
+        >
+          <summary class="cursor-pointer p-6 md:p-8 list-none select-none">
+            <div class="flex items-center gap-4 md:gap-6">
+              <!-- Icon -->
+              <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 p-3">
+                <div class="w-full h-full text-white" set:html={faq.icon} />
+              </div>
+
+              <!-- Question -->
+              <div class="flex-1">
+                <h3 class="text-base md:text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
+                  {faq.q}
+                </h3>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </div>
+          </summary>
+
+          <!-- Answer -->
+          <div class="px-6 md:px-8 pb-6 md:pb-8 pt-2">
+            <div class="pl-16 md:pl-20">
+              <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+                {faq.a}
+              </p>
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- CTA final -->
+    <div class="text-center mt-12 md:mt-16">
+      <div class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-2xl shadow-2xl">
+        <div class="bg-[#0A0A0A] rounded-2xl px-8 py-6">
+          <div class="w-16 h-16 mx-auto mb-4 text-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-black text-white mb-3">¿Tienes otra pregunta?</h3>
+          <p class="text-sm md:text-base text-gray-400 mb-6">Escríbenos por WhatsApp y te respondemos al instante</p>
+          <a 
+            href="https://wa.me/51921445800?text=Hola,%20tengo%20una%20pregunta%20sobre%20Flujo%20TV"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>Contactar por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  [style*="animation-delay"] {
+    animation: fadeIn 0.5s ease-out backwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

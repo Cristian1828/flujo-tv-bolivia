@@ -1,0 +1,199 @@
+---
+// Hero Bolivia - Deportes con títulos animados
+---
+
+<section id="inicio" class="relative min-h-screen bg-gradient-to-br from-[#0A0A0A] via-[#0d1b0d] to-[#1a1a1a] overflow-hidden">
+  <!-- Background effects deportivos -->
+  <div class="absolute inset-0">
+    <div class="absolute top-20 left-10 w-96 h-96 bg-green-600 rounded-full blur-[150px] opacity-20"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#FF6B00] rounded-full blur-[150px] opacity-15"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 lg:py-32">
+    <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+      <!-- Left - Content -->
+      <div class="order-2 lg:order-1">
+        <!-- Título animado -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+          <span class="block mb-3">
+            Disfruta de
+          </span>
+          <span id="rotating-text" class="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 min-h-[1.2em]">
+            Fútbol Mundial
+          </span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 max-w-xl">
+          Transmisión en vivo sin interrupciones. 
+          <span class="font-bold text-green-400">Todos los partidos, todas las ligas, en tu pantalla.</span>
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-3 md:gap-4 mb-8">
+          <div class="group text-center p-3 md:p-4 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur rounded-xl border border-white/10 hover:border-green-500/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-8 h-8 mx-auto mb-2 text-green-400 group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="7" y="4" width="10" height="16" rx="1"/>
+                <path d="M7 8h10M7 12h10M7 16h10M17 4v16M7 4v16"/>
+              </svg>
+            </div>
+            <div class="text-xl md:text-2xl font-black text-white">+3K</div>
+            <div class="text-[10px] md:text-xs text-gray-500">Canales</div>
+          </div>
+          <div class="group text-center p-3 md:p-4 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur rounded-xl border border-white/10 hover:border-green-500/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-8 h-8 mx-auto mb-2 text-green-400 group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div class="text-xl md:text-2xl font-black text-white">4K</div>
+            <div class="text-[10px] md:text-xs text-gray-500">Ultra HD</div>
+          </div>
+          <div class="group text-center p-3 md:p-4 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur rounded-xl border border-white/10 hover:border-green-500/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-8 h-8 mx-auto mb-2 text-green-400 group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <path d="M12 18h.01"/>
+              </svg>
+            </div>
+            <div class="text-xl md:text-2xl font-black text-white">3</div>
+            <div class="text-[10px] md:text-xs text-gray-500">Pantallas</div>
+          </div>
+        </div>
+
+        <!-- Price card -->
+        <div class="relative group mb-8">
+          <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+          <div class="relative bg-gradient-to-r from-green-600 to-emerald-600 p-1 rounded-2xl">
+            <div class="bg-[#0A0A0A] rounded-2xl p-6">
+              <div class="flex items-baseline gap-3 mb-3">
+                <span class="text-4xl md:text-5xl font-black text-white">$9.99</span>
+                <span class="text-lg md:text-xl text-gray-400">USD/mes</span>
+              </div>
+              <p class="text-gray-400 mb-6 text-sm">Sin contratos • Cancela cuando quieras</p>
+              <a 
+                href="https://wa.me/51921445800?text=¡Hola!%20Quiero%20activar%20Flujo%20TV%20por%20$9.99%20USD"
+                target="_blank"
+                class="group/btn block w-full py-4 text-center bg-gradient-to-r from-green-600 to-emerald-600 text-white font-black text-base md:text-lg rounded-xl hover:shadow-2xl hover:shadow-green-500/50 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden"
+              >
+                <span class="relative z-10">¡ACTIVA AHORA!</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-green-600 opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap gap-3">
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur rounded-full text-xs md:text-sm font-bold text-gray-300 border border-white/10">
+            <span class="text-green-400">✓</span> Pago Seguro
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur rounded-full text-xs md:text-sm font-bold text-gray-300 border border-white/10">
+            <span class="text-green-400">✓</span> Activación Inmediata
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur rounded-full text-xs md:text-sm font-bold text-gray-300 border border-white/10">
+            <span class="text-green-400">✓</span> Soporte 24/7
+          </div>
+        </div>
+      </div>
+
+      <!-- Right - Visual deportivo -->
+      <div class="order-1 lg:order-2 relative">
+        <!-- Glow effect deportivo -->
+        <div class="absolute -inset-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-3xl blur-3xl"></div>
+        
+        <!-- Stadium mockup card -->
+        <div class="relative">
+          <div class="bg-gradient-to-br from-[#1a1a1a] via-[#0d1b0d] to-[#111111] rounded-3xl p-6 md:p-8 border border-green-500/20 shadow-2xl">
+            <!-- Screen deportivo -->
+            <div class="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-4 mb-6 shadow-xl border border-green-500/10 overflow-hidden">
+              <!-- Stadium lights effect -->
+              <div class="absolute top-0 left-1/4 w-32 h-32 bg-green-400 rounded-full blur-3xl opacity-20"></div>
+              <div class="absolute top-0 right-1/4 w-32 h-32 bg-emerald-400 rounded-full blur-3xl opacity-20"></div>
+              
+              <div class="relative aspect-video bg-gradient-to-br from-green-900/50 via-emerald-900/30 to-gray-900 rounded-xl overflow-hidden border border-green-500/20">
+                <img 
+                  src="https://anjlagzfmcrjhcqcvwbr.supabase.co/storage/v1/object/sign/ldg_flujotv/panel%20flujo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MzBlM2EzMi0xMWM0LTQ3YzMtOGUyMi0xY2JmOTY0ZDczMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZGdfZmx1am90di9wYW5lbCBmbHVqby5wbmciLCJpYXQiOjE3Njg4Njg1NDIsImV4cCI6MTc3NzUwODU0Mn0.gqpyB_ASj5hovi8Fvten0kmcGhi05EnEofjepe3OnLQ"
+                  alt="Flujo TV Panel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Category icons -->
+            <div class="grid grid-cols-3 gap-3 md:gap-4">
+              <div class="group text-center p-3 md:p-4 bg-gradient-to-br from-green-500/10 to-emerald-500/5 hover:from-green-500/20 hover:to-emerald-500/10 rounded-xl border border-green-500/20 transition-all duration-300 cursor-pointer">
+                <div class="w-8 h-8 mx-auto mb-1 text-green-400 group-hover:scale-110 transition-transform">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    <path d="M2 12h20"/>
+                  </svg>
+                </div>
+                <div class="text-[10px] md:text-xs text-gray-400 font-semibold">Deportes</div>
+              </div>
+              <div class="group text-center p-3 md:p-4 bg-gradient-to-br from-purple-500/10 to-pink-500/5 hover:from-purple-500/20 hover:to-pink-500/10 rounded-xl border border-purple-500/20 transition-all duration-300 cursor-pointer">
+                <div class="w-8 h-8 mx-auto mb-1 text-purple-400 group-hover:scale-110 transition-transform">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                    <line x1="7" y1="2" x2="7" y2="22"/>
+                    <line x1="17" y1="2" x2="17" y2="22"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <line x1="2" y1="7" x2="7" y2="7"/>
+                    <line x1="2" y1="17" x2="7" y2="17"/>
+                    <line x1="17" y1="17" x2="22" y2="17"/>
+                    <line x1="17" y1="7" x2="22" y2="7"/>
+                  </svg>
+                </div>
+                <div class="text-[10px] md:text-xs text-gray-400 font-semibold">Películas</div>
+              </div>
+              <div class="group text-center p-3 md:p-4 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 hover:from-blue-500/20 hover:to-cyan-500/10 rounded-xl border border-blue-500/20 transition-all duration-300 cursor-pointer">
+                <div class="w-8 h-8 mx-auto mb-1 text-blue-400 group-hover:scale-110 transition-transform">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/>
+                    <polyline points="17 2 12 7 7 2"/>
+                  </svg>
+                </div>
+                <div class="text-[10px] md:text-xs text-gray-400 font-semibold">Series</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Rotating text animation
+  const texts = [
+    "Fútbol Mundial",
+    "Deportes en Vivo", 
+    "Acción Sin Parar",
+    "Tu Pasión Aquí"
+  ];
+  let currentIndex = 0;
+  const textElement = document.getElementById('rotating-text');
+  
+  function rotateText() {
+    if (textElement) {
+      textElement.style.opacity = '0';
+      textElement.style.transform = 'translateY(-20px)';
+      
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % texts.length;
+        textElement.textContent = texts[currentIndex];
+        textElement.style.opacity = '1';
+        textElement.style.transform = 'translateY(0)';
+      }, 300);
+    }
+  }
+  
+  // Iniciar animación
+  if (textElement) {
+    textElement.style.transition = 'all 0.3s ease-in-out';
+    setInterval(rotateText, 3000);
+  }
+</script>

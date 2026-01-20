@@ -1,0 +1,118 @@
+---
+const benefits = [
+  { 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>`, 
+    title: "Contenido Premium", 
+    desc: "Películas, series y documentales de primera", 
+    color: "from-red-500 to-orange-500" 
+  },
+  { 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>`, 
+    title: "Deportes en Vivo", 
+    desc: "Fútbol de todas las ligas del mundo", 
+    color: "from-green-500 to-emerald-500" 
+  },
+  { 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>`, 
+    title: "3 Dispositivos", 
+    desc: "Mira desde donde quieras", 
+    color: "from-blue-500 to-cyan-500" 
+  },
+  { 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, 
+    title: "Precio Justo", 
+    desc: "Desde $9.99/mes sin sorpresas", 
+    color: "from-yellow-500 to-orange-500" 
+  },
+  { 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`, 
+    title: "Canales Globales", 
+    desc: "Contenido local e internacional", 
+    color: "from-purple-500 to-pink-500" 
+  },
+  { 
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`, 
+    title: "Sin Contratos", 
+    desc: "Cancela cuando quieras", 
+    color: "from-red-500 to-yellow-500" 
+  }
+];
+---
+
+<section id="beneficios" class="relative py-32 bg-gradient-to-b from-[#0A0A0A] via-[#111111] to-[#0d1b0d]">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header storytelling -->
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4">
+        ¿Por qué elegir <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">Flujo TV?</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Porque entendemos lo que <span class="font-black text-green-400">necesitas</span>. 
+        No solo streaming, sino entretenimiento que habla tu idioma.
+      </p>
+    </div>
+
+    <!-- Cards con ilustraciones -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {benefits.map((benefit, index) => (
+        <div 
+          class="group relative"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          {/* Card principal */}
+          <div class="relative bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-green-500/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            {/* Icon con gradient */}
+            <div class={`w-20 h-20 mb-6 rounded-2xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500 p-4`}>
+              <div class="w-full h-full text-white" set:html={benefit.icon} />
+            </div>
+
+            {/* Content */}
+            <h3 class="text-2xl font-black text-white mb-3">
+              {benefit.title}
+            </h3>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              {benefit.desc}
+            </p>
+          </div>
+
+          {/* Floating accent */}
+          <div class={`absolute inset-0 bg-gradient-to-br ${benefit.color} rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500 -z-10`}></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA section -->
+    <div class="mt-24 text-center">
+      <div class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 p-1 rounded-3xl shadow-2xl">
+        <div class="bg-[#0A0A0A] rounded-3xl px-12 py-8">
+          <h3 class="text-3xl font-black text-white mb-4">
+            ¿Listo para la mejor experiencia?
+          </h3>
+          <p class="text-gray-400 text-lg mb-6">
+            Únete a miles de usuarios que ya disfrutan FlujoTV
+          </p>
+          <a 
+            href="https://wa.me/51921445800?text=Quiero%20empezar%20con%20FlujoTV"
+            target="_blank"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-black text-xl rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <span>¡EMPEZAR AHORA!</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  [style*="animation-delay"] {
+    animation: floatIn 0.8s ease-out backwards;
+  }
+
+  @keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+</style>
