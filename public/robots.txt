@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://flujotvbolivia.com/sitemap.xml
+Sitemap: https://bo.flujooficial.com/sitemap.xml
 
 # Evitar crawling de archivos innecesarios
 Disallow: /dist/
