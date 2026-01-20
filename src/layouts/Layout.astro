@@ -4,17 +4,104 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const canonicalURL = "https://flujotvbolivia.com";
+const description = "🔥 Flujo TV - Streaming Premium 4K ⚽ +3000 Canales en Vivo, Deportes, Películas y Series sin Límites. Desde $9.99/mes. 3 Dispositivos Simultáneos. Activación Inmediata. ¡Suscríbete Ahora!";
+const keywords = "streaming premium, TV en vivo, canales deportivos, fútbol en vivo, películas streaming, series online, TV por internet, streaming 4K, TV cable online, deportes en vivo, LaLiga, Champions League, Netflix alternativa, streaming económico, TV sin contrato, Flujo TV, canales premium, entretenimiento digital, streaming HD, plataforma streaming";
 ---
 
 <!doctype html>
 <html lang="es-BO">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/logo_flujo.png" />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- SEO Meta Tags -->
     <title>{title}</title>
-    <meta name="description" content="Flujo TV - Streaming Premium sin Límites" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Flujo TV" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content="Flujo TV - Streaming Premium 4K | Desde $9.99/mes | +3000 Canales" />
+    <meta property="og:description" content="🔥 +3000 Canales en Vivo, Deportes, Películas y Series. 3 Dispositivos. Activación Inmediata. Sin Contratos. ⚽ Todo el Fútbol en Vivo." />
+    <meta property="og:image" content={`${canonicalURL}/logo_flujo.png`} />
+    <meta property="og:locale" content="es_BO" />
+    <meta property="og:site_name" content="Flujo TV" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content="Flujo TV - Streaming Premium 4K | Desde $9.99/mes | +3000 Canales" />
+    <meta name="twitter:description" content="🔥 +3000 Canales en Vivo, Deportes, Películas y Series. 3 Dispositivos. Activación Inmediata." />
+    <meta name="twitter:image" content={`${canonicalURL}/logo_flujo.png`} />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#10b981" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Flujo TV" />
+    
+    <!-- Geo Targeting -->
+    <meta name="geo.region" content="BO" />
+    <meta name="geo.placename" content="Bolivia" />
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Flujo TV",
+        "description": "Plataforma de streaming premium con más de 3000 canales en vivo, deportes, películas y series en 4K",
+        "url": "https://flujotvbolivia.com",
+        "logo": "https://flujotvbolivia.com/logo_flujo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+51-921-445-800",
+          "contactType": "customer service",
+          "availableLanguage": ["es"]
+        },
+        "sameAs": [
+          "https://wa.me/51921445800"
+        ]
+      }
+    </script>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Flujo TV Streaming Premium",
+        "description": "Servicio de streaming premium con más de 3000 canales en vivo, calidad 4K, deportes, películas y series sin límites",
+        "brand": {
+          "@type": "Brand",
+          "name": "Flujo TV"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "9.99",
+          "highPrice": "99.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Flujo TV"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "1250"
+        }
+      }
+    </script>
+    
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body class="bg-black text-white">
     <slot />

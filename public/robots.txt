@@ -1,0 +1,18 @@
+# robots.txt para Flujo TV Bolivia
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://flujotvbolivia.com/sitemap.xml
+
+# Evitar crawling de archivos innecesarios
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /*.json$
+
+# Permitir todos los recursos principales
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
