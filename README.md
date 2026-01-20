@@ -1,53 +1,106 @@
-# Flujo TV Bolivia 🎬
+# 🎬 Flujo TV Bolivia
 
-**Streaming premium para todos los bolivianos.**
+Landing page profesional para Flujo TV - Plataforma de streaming IPTV premium para Bolivia.
 
-Una plataforma de streaming moderno y vibrante con diseño maximalista, colores multicolor y enfoque inclusivo para Bolivia.
+## 🌟 Características Principales
 
-## 🌟 Características
+- **+3K Canales en Vivo** - Contenido premium sin límites
+- **Calidad 4K Ultra HD** - Streaming de alta definición
+- **3 Dispositivos Simultáneos** - Comparte con tu familia
+- **Sin Contratos** - Cancela cuando quieras
+- **Soporte 24/7** - Atención por WhatsApp
+- **Activación Inmediata** - En menos de 5 minutos
 
-- **Catálogo Infinito**: 2500+ horas de películas, series y documentales
-- **5 Dispositivos Simultáneos**: Mira en TV, móvil, tablet y más
-- **Calidad 4K**: Disfruta del mejor entretenimiento en alta resolución
-- **Sin Anuncios**: Tu experiencia libre de interrupciones
-- **Cancelación Flexible**: Sin contratos ni compromisos
-- **Soporte 24/7**: Estamos aquí para ayudarte
+## 💰 Planes
 
-## 💰 Precios
+| Duración | Precio | Ahorro |
+|----------|--------|--------|
+| 1 Mes | $9.99 USD | - |
+| 3 Meses | $29.99 USD | - |
+| 6 Meses + 1 Gratis | $49.99 USD | $19.94 |
+| 12 Meses + 2 Gratis | $99.99 USD | $39.93 |
 
-- **Plan Premium**: USD $11.99/mes
-- **Primer mes**: 50% de descuento
+## 📱 Dispositivos Compatibles
+
+- Android (celulares y tablets)
+- Smart TV Android
+- Amazon Fire TV / Fire TV Stick
+- Google TV
+- Chromecast
+- TV Box Android
 
 ## 🎨 Diseño
 
-- **Tema**: Maximalismo + Texturas + Multicolor
-- **Colores Principales**: 
-  - Rojo vibrante (#EF4444)
-  - Naranja (#F97316)
-  - Amarillo (#FBBF24)
-  - Azul (#3B82F6)
-  - Verde (#10B981)
+- **Tema Oscuro Profesional** - UI moderna y elegante
+- **Iconos SVG** - Diseño limpio sin emojis
+- **Animaciones Suaves** - Experiencia de usuario fluida
+- **Responsive** - Optimizado para todos los dispositivos
+- **Colores**: Verde esmeralda (#10b981) como color principal
 
 ## 💳 Métodos de Pago
 
-- Visa
-- Mastercard
 - PayPal
+- Visa/Mastercard
 - Mercado Pago
+- Binance
+- Lemon Cash
 
-## 🚀 Instalación
+## 🚀 Desarrollo
 
 ```bash
-# Instala dependencias
+# Instalar dependencias
 npm install
-# o
-pnpm install
 
-# Inicia el servidor de desarrollo
+# Servidor de desarrollo
 npm run dev
 
-# Compila para producción
+# Compilar para producción
 npm run build
+
+# Preview de producción
+npm run preview
+```
+
+## 📂 Estructura del Proyecto
+
+```
+flujo-tv-bolivia/
+├── src/
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Benefits.astro
+│   │   ├── Installation.astro
+│   │   ├── PricingTable.astro
+│   │   ├── PaymentMethods.astro
+│   │   ├── Download.astro
+│   │   ├── FAQ.astro
+│   │   └── Footer.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+├── public/
+│   └── favicon.svg
+└── package.json
+```
+
+## 🛠️ Tecnologías
+
+- **Astro 5.16.11** - Framework web ultrarrápido
+- **Tailwind CSS** - Estilos utility-first
+- **SVG Icons** - Iconos escalables profesionales
+- **JavaScript** - Interactividad del lado del cliente
+
+## 📞 Contacto
+
+- **WhatsApp**: +51 921 445 800
+- **Email**: soporte@flujooficial.com
+
+## 📄 Licencia
+
+© 2026 Flujo TV. Todos los derechos reservados.
+
 
 # Vista previa de la compilación
 npm run preview
