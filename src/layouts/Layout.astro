@@ -1,107 +1,138 @@
 ---
+import { site } from '../config/site';
+
 interface Props {
-  title: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
 
-const { title } = Astro.props;
-const canonicalURL = "https://bo.flujooficial.com";
-const description = "Flujo TV Bolivia - Streaming Premium 4K . Activación Inmediata. ¡Suscríbete Ahora!";
-const keywords = "streaming premium, TV en vivo, canales deportivos, fútbol en vivo, películas streaming, series online, TV por internet, streaming 4K, TV cable online, deportes en vivo, LaLiga, Champions League, Netflix alternativa, streaming económico, TV sin contrato, Flujo TV, canales premium, entretenimiento digital, streaming HD, plataforma streaming";
+const {
+  title = 'Flujo TV Bolivia | Streaming Premium en Android',
+  description =
+    'Cine, series y TV en vivo con una app rápida e intuitiva. Compatible con Android (móvil/tablet), TV Box, Fire Stick, Google TV y Xiaomi Stick. Requiere internet estable. Soporte 24/7.',
+  keywords = [
+    'Flujo TV Bolivia',
+    'Streaming premium',
+    'TV en vivo',
+    'Películas',
+    'Series',
+    'Android TV Box',
+    'Fire Stick',
+    'Google TV',
+    'Xiaomi Stick',
+    'Magis TV',
+    'Magis 4K',
+    'MagisTV',
+    'Magis TV Bolivia'
+  ].join(', ')
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, site.canonical).toString();
+const ogImageUrl = new URL('/logo_flujo.png', site.canonical).toString();
+const pageId = `${canonicalUrl}#webpage`;
+const orgId = `${site.canonical}#organization`;
+const websiteId = `${site.canonical}#website`;
+const serviceId = `${site.canonical}#service`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': orgId,
+      name: 'Flujo TV',
+      url: site.canonical,
+      logo: ogImageUrl,
+      email: site.supportEmail,
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: site.supportEmail,
+          availableLanguage: ['es']
+        }
+      ],
+      sameAs: []
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: site.canonical,
+      name: 'Flujo TV',
+      publisher: { '@id': orgId },
+      inLanguage: 'es-BO'
+    },
+    {
+      '@type': 'WebPage',
+      '@id': pageId,
+      url: canonicalUrl,
+      name: title,
+      description,
+      isPartOf: { '@id': websiteId },
+      about: { '@id': serviceId },
+      inLanguage: 'es-BO',
+      primaryImageOfPage: { '@type': 'ImageObject', url: ogImageUrl }
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Servicio de streaming para Bolivia',
+      description,
+      provider: { '@id': orgId },
+      areaServed: [{ '@type': 'Country', name: 'Bolivia' }],
+      offers: [
+        { '@type': 'Offer', name: 'Plan 1 mes', price: 9, priceCurrency: 'USD', url: canonicalUrl, availability: 'https://schema.org/InStock' },
+        { '@type': 'Offer', name: 'Plan 3 meses', price: 27, priceCurrency: 'USD', url: canonicalUrl, availability: 'https://schema.org/InStock' },
+        { '@type': 'Offer', name: 'Plan 6 meses', price: 49, priceCurrency: 'USD', url: canonicalUrl, availability: 'https://schema.org/InStock' },
+        { '@type': 'Offer', name: 'Plan 12 meses', price: 95, priceCurrency: 'USD', url: canonicalUrl, availability: 'https://schema.org/InStock' }
+      ]
+    }
+  ]
+};
+
+const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION as string | undefined;
 ---
 
 <!doctype html>
 <html lang="es-BO">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/logo_flujo.png" />
-    <link rel="canonical" href={canonicalURL} />
-    
-    <!-- SEO Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Flujo TV" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    {googleVerification && <meta name="google-site-verification" content={googleVerification} />}
+
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" href={canonicalUrl} hreflang="es-BO" />
+    <link rel="alternate" href={canonicalUrl} hreflang="x-default" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content="Flujo TV Bolivia - Streaming Premium 4K | Desde $9.99/mes | +3000 Canales" />
-    <meta property="og:description" content="🔥 +3000 Canales en Vivo, Deportes, Películas y Series. 3 Dispositivos. Activación Inmediata. Sin Contratos. ⚽ Todo el Fútbol en Vivo." />
-    <meta property="og:image" content={`${canonicalURL}/logo_flujo.png`} />
     <meta property="og:locale" content="es_BO" />
     <meta property="og:site_name" content="Flujo TV" />
-    
-    <!-- Twitter -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={canonicalURL} />
-    <meta name="twitter:title" content="Flujo TV Bolivia - Streaming Premium 4K | Desde $9.99/mes | +3000 Canales" />
-    <meta name="twitter:description" content="🔥 +3000 Canales en Vivo, Deportes, Películas y Series. 3 Dispositivos. Activación Inmediata." />
-    <meta name="twitter:image" content={`${canonicalURL}/logo_flujo.png`} />
-    
-    <!-- Additional SEO -->
-    <meta name="theme-color" content="#10b981" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Flujo TV" />
-    
-    <!-- Geo Targeting -->
-    <meta name="geo.region" content="BO" />
-    <meta name="geo.placename" content="Bolivia" />
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Flujo TV",
-        "description": "Plataforma de streaming premium con más de 3000 canales en vivo, deportes, películas y series en 4K",
-        "url": "https://bo.flujooficial.com",
-        "logo": "https://bo.flujooficial.com/logo_flujo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+51-921-445-800",
-          "contactType": "customer service",
-          "availableLanguage": ["es"]
-        },
-        "sameAs": [
-          "https://wa.me/51921445800"
-        ]
-      }
-    </script>
-    
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Flujo TV Streaming Premium",
-        "description": "Servicio de streaming premium con más de 3000 canales en vivo, calidad 4K, deportes, películas y series sin límites",
-        "brand": {
-          "@type": "Brand",
-          "name": "Flujo TV"
-        },
-        "offers": {
-          "@type": "AggregateOffer",
-          "lowPrice": "9.99",
-          "highPrice": "99.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "Flujo TV"
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "1250"
-        }
-      }
-    </script>
-    
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="icon" type="image/png" href="/logo_flujo.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
     <meta name="generator" content={Astro.generator} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body class="bg-black text-white">
     <slot />

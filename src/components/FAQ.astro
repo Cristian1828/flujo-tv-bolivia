@@ -1,44 +1,48 @@
 ---
-// FAQ basado en flujotvecuador.app
 const faqs = [
   { 
     q: "¿Qué es Flujo TV?", 
-    a: "Es tu plataforma de entretenimiento completa. Miles de canales en vivo, películas, series y todos los partidos desde cualquier pantalla. La mejor alternativa al cable tradicional, más barata y sin ataduras.", 
+    a: "Flujo TV es un servicio de streaming premium para ver TV en vivo, películas y series desde dispositivos compatibles. Ideal si buscas una experiencia moderna y sin cables, con soporte y activación guiada.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>`
   },
   { 
     q: "¿En cuántas pantallas puedo ver al mismo tiempo?", 
-    a: "En hasta 3 dispositivos simultáneamente. Perfecto para compartir con tu familia - cada uno ve lo que quiere, cuando quiere, sin conflictos.", 
+    a: "Puedes usarlo en hasta 3 pantallas simultáneas. Así tu familia puede ver contenido diferente al mismo tiempo, sin complicaciones.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>`
   },
   { 
     q: "¿Funciona en mi dispositivo?", 
-    a: "Si tiene internet, funciona. Smart TV con Android, celulares, tablets, Fire TV Stick, Chromecast, Google TV, TV Box. Instalas la app y listo.", 
+    a: "Funciona en Android (móvil y tablet), TV Box, Fire Stick, Google TV y Xiaomi Stick. Instalamos y dejamos todo listo con soporte paso a paso.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
   },
   { 
-    q: "¿Cómo verifico si mi Smart TV es compatible?", 
-    a: "Fácil: si tu TV tiene Google Play Store, es Android y funciona perfectamente. Marcas como Sony, TCL, Philips, Xiaomi suelen tenerlo. ¿No estás seguro? Escríbenos y te ayudamos a confirmarlo.", 
+    q: "¿Puedo usarlo en Smart TV Samsung o LG?", 
+    a: "En Samsung/LG (sistema nativo) necesitas un TV Box o un Stick (por ejemplo Fire Stick, Google TV o Xiaomi Stick). Con eso instalas la app y tu TV queda lista.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`
   },
   { 
     q: "¿Cuándo y cómo recibo mis accesos?", 
-    a: "Apenas confirmes el pago, te llegan tus datos (usuario y clave) por email y WhatsApp. En menos de 5 minutos ya estás viendo. Activación inmediata, sin esperas.", 
+    a: "Tras confirmar el pago, te enviamos tu usuario y clave por WhatsApp y/o correo. En la mayoría de casos quedas activo en pocos minutos.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`
   },
   { 
     q: "¿Qué velocidad de internet necesito?", 
-    a: "Con 10 Mbps ves perfecto en HD. Si quieres 4K, recomendamos 25 Mbps o más. La app se adapta sola a tu conexión para que nunca se corte.", 
+    a: "Recomendamos internet estable. Para HD, desde 10 Mbps suele ir bien; para 4K, ideal 25 Mbps o más. Si tu conexión baja, la calidad puede ajustarse.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`
+  },
+  {
+    q: "Si buscabas Magis TV o Magis 4K, ¿esto te sirve?",
+    a: "Si llegaste buscando Magis TV o Magis 4K, aquí puedes activar Flujo TV como alternativa premium. No estamos afiliados a otras marcas: te asesoramos para instalar y usar Flujo TV en Android, TV Box o Stick con soporte.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M12 4h9"/><path d="M4 9h16"/><path d="M4 15h16"/></svg>`
   },
   { 
     q: "¿Tienen plan gratuito o prueba gratis?", 
-    a: "No manejamos versión gratis. Somos un servicio premium que garantiza calidad, estabilidad y canales reales. Nuestro plan más económico arranca en solo $9.99 al mes.", 
+    a: "No manejamos versión gratis. Somos un servicio premium que garantiza calidad, estabilidad y canales reales. Nuestro plan más económico arranca en solo $9 al mes.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
   },
   { 
     q: "¿Tengo que descargar algo?", 
-    a: "Sí, instalas nuestra app en tu dispositivo. Toma 5 minutos máximo y es súper simple. Te mandamos las instrucciones paso a paso, y si te trabas, nuestro soporte te guía por WhatsApp.", 
+    a: "Sí. Instalamos la app en tu dispositivo compatible y te enviamos el paso a paso. Si algo se complica, te guiamos por WhatsApp hasta dejarlo funcionando.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
   },
   { 
@@ -48,7 +52,7 @@ const faqs = [
   },
   { 
     q: "¿Atienden 24/7?", 
-    a: "Totalmente. Nuestro equipo está en WhatsApp las 24 horas, los 7 días de la semana. Cualquier problema, duda o consulta, te respondemos al toque.", 
+    a: "Sí. Atendemos por WhatsApp 24/7 para dudas, instalación y soporte.", 
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
   }
 ];

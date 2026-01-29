@@ -1,115 +1,68 @@
 # 🎬 Flujo TV Bolivia
 
-Landing page profesional para Flujo TV - Plataforma de streaming IPTV premium para Bolivia.
+Landing page de Flujo TV para Bolivia (Astro). Enfoque: experiencia estable, soporte y activación.
 
-## 🌟 Características Principales
+## 🌐 Dominio
 
-- **+3K Canales en Vivo** - Contenido premium sin límites
-- **Calidad 4K Ultra HD** - Streaming de alta definición
-- **3 Dispositivos Simultáneos** - Comparte con tu familia
-- **Sin Contratos** - Cancela cuando quieras
-- **Soporte 24/7** - Atención por WhatsApp
-- **Activación Inmediata** - En menos de 5 minutos
+- **Canonical / Producción**: `https://bolivia.flujooficial.com`
+- `robots.txt` y `sitemap.xml` apuntan a ese dominio.
 
-## 💰 Planes
+## 💰 Planes (USD)
 
-| Duración | Precio | Ahorro |
-|----------|--------|--------|
-| 1 Mes | $9.99 USD | - |
-| 3 Meses | $29.99 USD | - |
-| 6 Meses + 1 Gratis | $49.99 USD | $19.94 |
-| 12 Meses + 2 Gratis | $99.99 USD | $39.93 |
+| Duración | Precio |
+|---|---:|
+| 1 mes | 9 |
+| 3 meses | 27 |
+| 6 meses | 49 |
+| 12 meses | 95 |
 
-## 📱 Dispositivos Compatibles
+## ✅ Dispositivos compatibles (reglas)
 
-- Android (celulares y tablets)
-- Smart TV Android
-- Amazon Fire TV / Fire TV Stick
+- Android (móvil y tablet)
+- TV Box
+- Fire Stick
 - Google TV
-- Chromecast
-- TV Box Android
+- Xiaomi Stick
 
-## 🎨 Diseño
+Requiere internet estable.
 
-- **Tema Oscuro Profesional** - UI moderna y elegante
-- **Iconos SVG** - Diseño limpio sin emojis
-- **Animaciones Suaves** - Experiencia de usuario fluida
-- **Responsive** - Optimizado para todos los dispositivos
-- **Colores**: Verde esmeralda (#10b981) como color principal
+## 🔎 SEO (resumen)
 
-## 💳 Métodos de Pago
+- Canonical dinámico por ruta (basado en `site.canonical`).
+- OpenGraph/Twitter consistentes con el `title/description`.
+- JSON-LD (Organization/WebSite/WebPage/Service) + ofertas con precios.
+- Keywords incluyen búsquedas relacionadas como **“Magis TV”** y **“Magis 4K”** sin remover la marca Flujo.
+	- Nota: esto no implica afiliación con otras marcas; se usa como término de búsqueda.
 
-- PayPal
-- Visa/Mastercard
-- Mercado Pago
-- Binance
-- Lemon Cash
+## 🧩 Configuración
 
-## 🚀 Desarrollo
+Variables clave en:
+
+- `src/config/site.ts` (dominio, canonical, soporte, WhatsApp, planes).
+- `src/layouts/Layout.astro` (meta tags + schema).
+
+## 🧪 Desarrollo
 
 ```bash
-# Instalar dependencias
 npm install
-
-# Servidor de desarrollo
 npm run dev
-
-# Compilar para producción
 npm run build
-
-# Preview de producción
 npm run preview
 ```
 
-## 📂 Estructura del Proyecto
+## 📝 Cambios recientes (2026-01-28)
 
-```
-flujo-tv-bolivia/
-├── src/
-│   ├── components/
-│   │   ├── Header.astro
-│   │   ├── Hero.astro
-│   │   ├── Benefits.astro
-│   │   ├── Installation.astro
-│   │   ├── PricingTable.astro
-│   │   ├── PaymentMethods.astro
-│   │   ├── Download.astro
-│   │   ├── FAQ.astro
-│   │   └── Footer.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-├── public/
-│   └── favicon.svg
-└── package.json
-```
-
-## 🛠️ Tecnologías
-
-- **Astro 5.16.11** - Framework web ultrarrápido
-- **Tailwind CSS** - Estilos utility-first
-- **SVG Icons** - Iconos escalables profesionales
-- **JavaScript** - Interactividad del lado del cliente
+- Ajuste de precios a 9/27/49/95 USD.
+- Migración de dominio `bo.flujooficial.com` → `bolivia.flujooficial.com`.
+- SEO reestructurado para formato tipo Ecuador (canonical/OG/Twitter/JSON-LD).
+- Footer actualizado: logo + “Premium - Distribuidor oficial en Latinoamérica” + texto de seguridad.
+- FAQ reescritas (sin etiquetas HTML) y con una pregunta para búsquedas “Magis TV / Magis 4K”.
 
 ## 📞 Contacto
 
-- **WhatsApp**: +51 921 445 800
-- **Email**: soporte@flujooficial.com
+- WhatsApp: +51 921 445 800
+- Email: soporte@flujooficial.com
 
 ## 📄 Licencia
 
 © 2026 Flujo TV. Todos los derechos reservados.
-
-
-# Vista previa de la compilación
-npm run preview
-```
-
-## 📱 Contacto
-
-WhatsApp: [Haz clic aquí](https://wa.me/59123456789)
-
-## 📄 Licencia
-
-© 2024 Flujo TV Bolivia. Todos los derechos reservados.
